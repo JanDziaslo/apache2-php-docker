@@ -1,0 +1,15 @@
+services:
+  wytryszki:
+    image: ghcr.io/jandziaslo/apache2-php-docker
+    container_name: wytryszki
+    restart: unless-stopped
+    ports:
+      - "80:8081"
+    volumes:
+      - ./data:/var/www/wytryszki/data
+    networks:
+      - web-network
+
+networks:
+  web-network:
+    external: true
