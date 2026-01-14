@@ -7,6 +7,7 @@ services:
       - "80:8081"
     volumes:
       - ./data:/var/www/wytryszki/data
+      - ./wytryszki.conf:/etc/apache2/sites-available/000-default.conf
     networks:
       - web-network
 
